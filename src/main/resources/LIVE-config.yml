@@ -1,0 +1,22 @@
+server:
+  type: simple
+  applicationContextPath: /v1
+  adminContextPath: /admin
+  connector:
+    type: http
+    port: 7001
+
+logging:
+
+  # The default level of all loggers. Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
+  level: INFO
+
+mongoConfiguration:
+  host: mongo
+  port: 27017
+  user: root
+  password: fnjk34n5fn30fjnfof5sdsd3e3efn
+  authDb : admin
+  db: live
+
+environment : LIVE

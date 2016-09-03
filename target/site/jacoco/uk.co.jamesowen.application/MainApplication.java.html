@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>MainApplication.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">blog-post-service</a> &gt; <a href="index.source.html" class="el_package">uk.co.jamesowen.application</a> &gt; <span class="el_source">MainApplication.java</span></div><h1>MainApplication.java</h1><pre class="source lang-java linenums">package uk.co.jamesowen.application;
+
+
+import com.mongodb.MongoClient;
+import com.mongodb.MongoCredential;
+import com.mongodb.ServerAddress;
+import io.dropwizard.Application;
+import io.dropwizard.auth.AuthFactory;
+import io.dropwizard.auth.basic.BasicAuthFactory;
+import io.dropwizard.setup.Environment;
+import org.apache.log4j.Logger;
+import org.mongodb.morphia.Morphia;
+import uk.co.jamesowen.configuration.BlogPostServiceConfiguration;
+import uk.co.jamesowen.configuration.MongoConfiguration;
+import uk.co.jamesowen.resource.MailController;
+
+import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import java.util.Collections;
+import java.util.Properties;
+
+import static com.mongodb.MongoCredential.createCredential;
+import static java.util.Collections.singletonList;
+
+<span class="nc" id="L26">public class MainApplication extends Application&lt;BlogPostServiceConfiguration&gt; {</span>
+
+<span class="nc" id="L28">    private static final Logger LOGGER = Logger.getLogger(MainApplication.class);</span>
+
+    public static void main(String[] args) throws Exception {
+<span class="nc" id="L31">        new MainApplication().run(args);</span>
+<span class="nc" id="L32">    }</span>
+
+    public void run(BlogPostServiceConfiguration configuration, Environment environment) {
+
+<span class="nc" id="L36">environment.jersey().register(MailController.class);</span>
+
+<span class="nc" id="L38">    }</span>
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

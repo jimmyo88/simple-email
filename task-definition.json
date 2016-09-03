@@ -1,0 +1,26 @@
+{
+  "family": "bps-dev",
+  "containerDefinitions": [
+    {
+      "image": "jimmyo88/bps:latest",
+      "name": "bps-dev",
+      "cpu": 100,
+      "memory": 128,
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 7001,
+          "protocol": "tcp"
+        }
+      ],
+      "command": [
+        "java",
+        "-jar",
+        "/data/bps/blog-post-service-1.0-SNAPSHOT.jar",
+        "server",
+        "/data/bps/classes/DEV-config.yml"
+      ]
+    }
+  ]
+}

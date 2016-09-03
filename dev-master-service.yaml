@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: bps-service
+  labels:
+    app: bps
+spec:
+  type: LoadBalancer
+  ports:
+    # the port that this service should serve on
+   - port: 7001
+     targetPort: 7001
+     nodePort: 30060
+  selector:
+    app: bps
+---
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: bps
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: bps
+    spec:
+      containers:
+      - name: bps-dev
+        image: jimmyo88/bps:48
+        command:  [ "java", "-jar", "/data/bps/blog-post-service-1.0-SNAPSHOT.jar", "server", "/data/bps/classes/DEV-config.yml"]
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "300m"
+          limits:
+            memory: "128Mi"
+            cpu: "300m"
+        ports:
+        - containerPort: 7001
+#        volumeMounts:
+#                - name: target-folder
+#                  mountPath: /data/bps
+#      volumes:
+#        - name: target-folder
+#          hostPath:
+#            path: /Users/James/Desktop/Developer/APPS/BlogPostService/target

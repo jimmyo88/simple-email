@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>MongoConfiguration.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">blog-post-service</a> &gt; <a href="index.source.html" class="el_package">uk.co.jamesowen.configuration</a> &gt; <span class="el_source">MongoConfiguration.java</span></div><h1>MongoConfiguration.java</h1><pre class="source lang-java linenums">package uk.co.jamesowen.configuration;
+
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+
+<span class="nc" id="L6">public class MongoConfiguration {</span>
+
+    private Integer port;
+    private String host;
+    private String db;
+    private String user;
+    private String password;
+    private String authDb;
+
+    public Integer getPort() {
+<span class="nc" id="L16">        return port;</span>
+    }
+
+    public void setPort(Integer port) {
+<span class="nc" id="L20">        this.port = port;</span>
+<span class="nc" id="L21">    }</span>
+
+    public String getHost() {
+<span class="nc" id="L24">        return host;</span>
+    }
+
+    public void setHost(String host) {
+<span class="nc" id="L28">        this.host = host;</span>
+<span class="nc" id="L29">    }</span>
+
+    public String getDb() {
+<span class="nc" id="L32">        return db;</span>
+    }
+
+    public void setDb(String db) {
+<span class="nc" id="L36">        this.db = db;</span>
+<span class="nc" id="L37">    }</span>
+
+    public String getUser() {
+<span class="nc" id="L40">        return user;</span>
+    }
+
+    public void setUser(String user) {
+<span class="nc" id="L44">        this.user = user;</span>
+<span class="nc" id="L45">    }</span>
+
+    public String getPassword() {
+<span class="nc" id="L48">        return password;</span>
+    }
+
+    public void setPassword(String password) {
+<span class="nc" id="L52">        this.password = password;</span>
+<span class="nc" id="L53">    }</span>
+
+    public String getAuthDb() {
+<span class="nc" id="L56">        return authDb;</span>
+    }
+
+    public void setAuthDb(String authDb) {
+<span class="nc" id="L60">        this.authDb = authDb;</span>
+<span class="nc" id="L61">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

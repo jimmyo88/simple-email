@@ -1,0 +1,7 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+blog-post-service,uk.co.jamesowen.resource,MailController.new Authenticator() {...},12,0,0,0,2,0,2,0,2,0
+blog-post-service,uk.co.jamesowen.resource,MailController,80,0,0,0,23,0,3,0,3,0
+blog-post-service,uk.co.jamesowen.resource,EmailMessage,10,0,0,0,4,0,3,0,3,0
+blog-post-service,uk.co.jamesowen.application,MainApplication,18,0,0,0,6,0,4,0,4,0
+blog-post-service,uk.co.jamesowen.configuration,BlogPostServiceConfiguration,17,0,0,0,7,0,5,0,5,0
+blog-post-service,uk.co.jamesowen.configuration,MongoConfiguration,45,0,0,0,19,0,13,0,13,0

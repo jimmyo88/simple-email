@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: bps-service
+  labels:
+    app: bps
+spec:
+  ports:
+    # the port that this service should serve on
+   - port: 7001
+     targetPort: 7001
+  selector:
+    app: bps
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: bps
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: bps
+    spec:
+      containers:
+      - name: bps-qa
+        image: jimmyo88/bps:cardiff
+        command:  ["java", "-jar", "data/bps/blog-post-service-1.0-SNAPSHOT.jar", "server", "data/bps/classes/QA-config.yml"]
+        ports:
+        - containerPort: 7001
+      nodeSelector:
+        env: qa
