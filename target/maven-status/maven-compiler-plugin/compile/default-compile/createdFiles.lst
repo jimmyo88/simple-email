@@ -1,0 +1,6 @@
+uk/co/jamesowen/configuration/MongoConfiguration.class
+uk/co/jamesowen/resource/EmailMessage.class
+uk/co/jamesowen/application/MainApplication.class
+uk/co/jamesowen/configuration/BlogPostServiceConfiguration.class
+uk/co/jamesowen/resource/MailController.class
+uk/co/jamesowen/resource/MailController$1.class
